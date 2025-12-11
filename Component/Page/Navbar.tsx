@@ -1,85 +1,56 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
-import { twMerge } from "tailwind-merge";
-import clsx from "clsx";
+// import { useState } from "react";
+//import Link from "next/link";
+//import { twMerge } from "tailwind-merge";
+//import clsx from "clsx";
+//import Image from "next/image";
+//import Logo from "@/public/logo/fatima-removebg-preview.png";
+import {  Menu, MapPin, Phone, Mail,  } from 'lucide-react';
 
+const accentColor = '#A8996C';
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+//   const [open, setOpen] = useState(false);
+
 
   return (
-    <nav className="w-full bg-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* top bar */}
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <Link href="/" className="text-2xl font-bold">
-            MyBrand
-          </Link>
-
-          {/* Desktop menu */}
-          <div className="hidden md:flex space-x-6">
-            <NavLink href="/">Home</NavLink>
-            <NavLink href="/about">About</NavLink>
-            <NavLink href="/services">Services</NavLink>
-            <NavLink href="/contact">Contact</NavLink>
-          </div>
-
-          {/* Mobile icon */}
-          <button
-            className="md:hidden"
-            onClick={() => setOpen(!open)}
-            aria-label="Toggle Menu"
-          >
-            <div className="space-y-1">
-              <span className="block w-6 h-0.5 bg-black"></span>
-              <span className="block w-6 h-0.5 bg-black"></span>
-              <span className="block w-6 h-0.5 bg-black"></span>
-            </div>
-          </button>
-        </div>
+    <header className="absolute top-0 left-0 right-0 z-10 text-white">
+         {/* Top Contact Bar (Dark Olive Green) */}
+    <div style={{ backgroundColor: '#4D4C3A' }} className="hidden lg:flex justify-between items-center py-2 px-12 text-sm">
+      <div className="flex space-x-4">
+        <span className="flex items-center">
+          <MapPin className="w-4 h-4 mr-1 text-gray-300" />
+          70 St. Street Name Rd, Solihull B92 7BP
+        </span>
       </div>
-
-      {/* Mobile menu section */}
-      <div 
-        className={twMerge(
-          clsx(
-            "md:hidden flex flex-col bg-white shadow-md transition-all duration-300 overflow-hidden items-center justify-center",
-            open ? "max-h-96 py-4" : "max-h-0"
-          )
-        )}
-      >
-        <NavLinkMobile href="/">Home</NavLinkMobile>
-        <NavLinkMobile href="/about">About</NavLinkMobile>
-        <NavLinkMobile href="/services">Services</NavLinkMobile>
-        <NavLinkMobile href="/contact">Contact</NavLinkMobile>
+      <div className="flex space-x-6">
+        <span className="flex items-center">
+          <Phone className="w-4 h-4 mr-1 text-gray-300" />
+          123-456-8321
+        </span>
+        <span className="flex items-center">
+          <Mail className="w-4 h-4 mr-1 text-gray-300" />
+          support@company.com
+        </span>
       </div>
+    </div>
+
+     {/* Main Navigation */}
+    <nav className="flex justify-between items-center py-4 px-6 lg:px-12">
+      <div className="text-2xl font-bold tracking-widest">
+        <span style={{ color: accentColor }}>Fatima</span><span className="text-white">Home</span>
+      </div>
+      <div className="hidden lg:flex space-x-6 text-sm font-medium">
+        <a href="#home" className="hover:text-amber-200 transition">Home</a>
+        <a href="#about" className="hover:text-amber-200 transition">About Us</a>
+        <a href="#services" className="hover:text-amber-200 transition">Services</a>
+        <a href="#life" className="hover:text-amber-200 transition">Life</a>
+        <a href="#contact" className="hover:text-amber-200 transition">Contact</a>
+      </div>
+      <button className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition">
+        <Menu className="w-6 h-6" />
+      </button>
     </nav>
-  );
-}
-
-/* -------- Reusable nav links ---------- */
-interface NavProps {
-  href: string;
-  children: React.ReactNode;
-}
-
-function NavLink({ href, children }: NavProps) {
-  return (
-    <Link href={href} className="hover:text-blue-600 transition">
-      {children}
-    </Link>
-  );
-}
-
-function NavLinkMobile({ href, children }: NavProps) {
-  return (
-    <Link
-      href={href}
-      className="px-4 py-2 border-b text-gray-700 hover:bg-gray-100"
-    >
-      {children}
-    </Link>
+    </header>
   );
 }
