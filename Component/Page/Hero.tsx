@@ -23,7 +23,7 @@ const Hero = () => {
         A Luxury Care Home in the heart of Houston, Texas
       </h1>
       <p className="text-lg lg:text-xl font-extralight max-w-3xl mb-10">
-        Welcoming a new year at St Bernard's Residential Care Home. A family-run residence care home, providing Residential and Day Care services.
+        Welcoming a new year at our lady fatima  Residential Care Home. A family-run residence care home, providing Residential and Day Care services.
       </p>
       <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
         <button style={{ backgroundColor: accentColor, color: primaryColor }} className="px-8 py-3 rounded-xl font-semibold shadow-xl transition duration-300 hover:opacity-90">

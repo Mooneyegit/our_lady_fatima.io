@@ -99,21 +99,21 @@ interface FaqItem {
 const faqs: FaqItem[] = [
   {
     id: 1,
-    question: "What's the best thing about Switzerland?",
+    question: "What's the difference between assisted living and a nursing home?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      " Assisted living provides support with daily activities while promoting independence. Nursing homes offer 24/7 medical care. Many seniors thrive in assisted living for years before needing skilled nursing.",
   },
   {
     id: 2,
-    question: "How do you make holy water?",
+    question: "Do you accept Medicaid or Medicare?",
     answer:
-      "You boil the hell out of it. It's an ancient technique passed down through generations of spiritual chemists.",
+      "We work with families to explore all payment options, including long-term care insurance, VA benefits, and private pay. Contact us for a personalized financial consultation.",
   },
   {
     id: 3,
-    question: "What do you call someone with no body and no nose?",
+    question: "Can couples with different care needs live together?",
     answer:
-      "Nobody knows! It’s one of life’s great philosophical mysteries.",
+      "Yes! We often accommodate couples where one spouse needs memory care while the other only needs assisted living. We create customized solutions for each situation.",
   },
   {
     id: 4,
@@ -143,9 +143,9 @@ export default function Faq() {
   };
 
   return (
-    <div className="bg-slate-900 py-16 sm:py-24">
+    <div className="bg-[#F9F9F7] py-16 sm:py-24">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-5xl font-bold tracking-tight text-white pb-12 sm:pb-16">
+        <h2 className="text-5xl font-bold tracking-tight text-gray-600 pb-12 sm:pb-16">
           Frequently asked questions
         </h2>
 
@@ -157,7 +157,7 @@ export default function Faq() {
             >
               <dt>
                 <button
-                  className="flex w-full items-start justify-between text-left text-white focus:outline-none"
+                  className="flex w-full items-start justify-between text-left text-gray-600 focus:outline-none"
                   onClick={() => toggleOpen(faq.id)}
                 >
                   <span className="text-xl font-semibold leading-7">
@@ -167,7 +167,7 @@ export default function Faq() {
                   <span className="ml-6 flex h-7 items-center">
                     {openId === faq.id ? (
                       <svg
-                        className="h-6 w-6 text-indigo-400"
+                        className="h-6 w-6 text-gray-600"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -183,7 +183,7 @@ export default function Faq() {
                       </svg>
                     ) : (
                       <svg
-                        className="h-6 w-6 text-indigo-400"
+                        className="h-6 w-6 text-gray-600"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
