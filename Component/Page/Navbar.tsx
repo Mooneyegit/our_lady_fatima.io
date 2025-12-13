@@ -4,6 +4,20 @@ import { useState } from "react";
 import { Menu, X, MapPin, Phone, Mail } from "lucide-react";
 
 const accentColor = "#A8996C";
+interface NavLink {
+  key: string;
+  href: string;
+  label: string;
+}
+
+const navLinks: NavLink[] = [
+  { key: "home", href: "/", label: "Home" },
+  { key: "about", href: "/about", label: "About Us" },
+  { key: "services", href: "/service", label: "Services" },
+  { key: "life", href: "/life", label: "Life" },
+  { key: "contact", href: "/contact", label: "Contact" }
+];
+
 
 export default function Navbar() {
   const [open, setOpen] = useState<boolean>(false);
@@ -43,10 +57,10 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-6 text-sm font-medium">
           <a href="#home" className="hover:text-amber-200 transition">Home</a>
-          <a href="#about" className="hover:text-amber-200 transition">About Us</a>
-          <a href="#services" className="hover:text-amber-200 transition">Services</a>
-          <a href="#life" className="hover:text-amber-200 transition">Life</a>
-          <a href="#contact" className="hover:text-amber-200 transition">Contact</a>
+          <a href="/about" className="hover:text-amber-200 transition">About Us</a>
+          <a href="/services" className="hover:text-amber-200 transition">Services</a>
+          <a href="/blog" className="hover:text-amber-200 transition">Life</a>
+          <a href="/contact" className="hover:text-amber-200 transition">Contact</a>
         </div>
 
         {/* Mobile Toggle */}
@@ -67,7 +81,7 @@ export default function Navbar() {
         style={{ backgroundColor: "#4D4C3A" }}
       >
         <div className="flex flex-col px-6 py-4 space-y-4 text-sm font-medium">
-          {["home", "about", "services", "life", "contact"].map(link => (
+          {/* {["home", "about", "services", "life", "contact"].map(link => (
             <a
               key={link}
               href={`#${link}`}
@@ -76,7 +90,17 @@ export default function Navbar() {
             >
               {link === "about" ? "About Us" : link.charAt(0).toUpperCase() + link.slice(1)}
             </a>
-          ))}
+          ))} */}
+          {navLinks.map((link: NavLink) => (
+  <a
+    key={link.key}
+    href={link.href}
+    onClick={() => setOpen(false)}
+    className="hover:text-amber-200 transition"
+  >
+    {link.label}
+  </a>
+))}
         </div>
       </div>
     </header>
