@@ -161,7 +161,7 @@ const Footer = () => {
             {/* Column 1: Logo & Mission */}
             <div className="col-span-2 lg:col-span-1">
               <div className="text-2xl font-bold tracking-widest mb-4">
-                <span style={{ color: accentColor }}>Care</span><span className="text-white">Home</span>
+                <span style={{ color: accentColor }}>Our lady fatima</span><span className="text-white">Home</span>
               </div>
               <p className="text-sm text-gray-300">
                 Providing compassionate, luxury care in the heart of the community. Your loved ones are safe with us.
