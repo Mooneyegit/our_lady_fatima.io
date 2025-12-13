@@ -115,24 +115,9 @@ const faqs: FaqItem[] = [
     answer:
       "Yes! We often accommodate couples where one spouse needs memory care while the other only needs assisted living. We create customized solutions for each situation.",
   },
-  {
-    id: 4,
-    question: "Why do you never see elephants hiding in trees?",
-    answer:
-      "Because they're so good at it. Their camouflage skills are severely underestimated in the wild.",
-  },
-  {
-    id: 5,
-    question: "Why can't you hear a pterodactyl go to the bathroom?",
-    answer:
-      "Because the 'P' is silent. A key rule of paleontology etiquette.",
-  },
-  {
-    id: 6,
-    question: "Why did the invisible man turn down the job offer?",
-    answer:
-      "He couldn't see himself doing it. The lack of visibility made career planning difficult.",
-  },
+  
+  
+ 
 ];
 
 export default function Faq() {

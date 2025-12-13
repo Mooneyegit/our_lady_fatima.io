@@ -27,10 +27,10 @@ const Hero = () => {
       </p>
       <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
         <button style={{ backgroundColor: accentColor, color: primaryColor }} className="px-8 py-3 rounded-xl font-semibold shadow-xl transition duration-300 hover:opacity-90">
-          Book a Tour
+          <a href='/contact'>Book a Tour</a>
         </button>
         <button className="px-8 py-3 rounded-xl font-semibold border-2 border-white transition duration-300 hover:bg-white hover:text-gray-800">
-          View Us
+         <a href='/contact'>View Us</a>
         </button>
       </div>
     </div>
