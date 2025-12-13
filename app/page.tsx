@@ -2,6 +2,7 @@ import About from "@/Component/Page/About";
 import Hero from "@/Component/Page/Hero";
 import LifeAtHomeSecton from "@/Component/Page/LifeAtHomeSecton";
 import Services from "@/Component/Page/Services";
+import Testimonials from "@/Component/Page/Testimonials";
 import CtaCard from "@/Component/UI/CtaCard";
 import Faq from "@/Component/UI/Faq";
 
@@ -14,6 +15,7 @@ export default function Home() {
     <LifeAtHomeSecton/>
     <Services />
     <CtaCard />
+    <Testimonials />
     <Faq />
    </div>
   );
